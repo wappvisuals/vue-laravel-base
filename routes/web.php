@@ -13,10 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('welcome');
-});
+}); */
 
-
-Route::any('/admin/{any}', [App\Http\Controllers\FrontEnd::class, 'index'])->where('any', '^(?!api).*$');
-Route::any('/organizer/{any}', [App\Http\Controllers\FrontEnd::class, 'index'])->where('any', '^(?!api).*$');
+Route::any('/{any}', [App\Http\Controllers\FrontEnd::class, 'index'])->where('any', '^(?!api).*$');

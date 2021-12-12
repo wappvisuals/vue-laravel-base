@@ -8,7 +8,7 @@ class FrontEnd extends Controller
 {
     public function index()
     {
-        return view('dashboard');
+        return view('layouts.vue');
     }
 
 }
